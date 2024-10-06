@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(247, 247, 247, 0.1);
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px); 
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    color: #ffffff;
+}
+
+@keyframes fadeColor {
+    0% {
+        color: rgba(255, 255, 255, 1);
+    }
+    50% {
+        color: rgba(255, 255, 255, 0);
+    }
+    100% {
+        color: rgba(255, 255, 255, 1);
+    }
+}
+span {
+    display: inline-block;
+}
+button {
+    margin-top: 20px;
+    padding: 20px 40px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#quiz-container {
+    
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+#caramelito {
+    font-size: 5rem;
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+    animation: pulse 1s infinite;
+    position: relative;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+}
+
+.additional-caramelito {
+    font-size: 2rem;
+    position: absolute;
+    animation: explode 1s forwards;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(0.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Asegura que el video esté detrás del contenido */
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra toda la pantalla */
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté por encima del video */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white; /* Color del texto para que sea visible sobre el video */
+}
+img {
+    max-width: 700px;  /* Ajusta el tamaño máximo de la imagen */
+    height: auto;      /* Mantiene la proporción de la imagen */
+    display: block;
+    margin: 0 auto;    /* Centra la imagen */
+}
+
+.option-btn {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
